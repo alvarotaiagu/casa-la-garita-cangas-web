@@ -284,6 +284,38 @@ console.log('\n2. Mirador del hero y sol de hoy');
   await ctx.close();
 }
 
+/* ================= 2b. la panorámica ================= */
+console.log('\n2b. Panorámica (scroll + arrastre)');
+for (const movil of [false, true]) {
+  const { ctx, page } = await nueva(movil ? { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 } : {}, { script: sinCookies });
+  await page.goto(BASE);
+  await esperarCortina(page);
+  const tx = () => page.evaluate(() => { const m = /translate3d\((-?[\d.]+)px/.exec(document.getElementById('pano-riel').style.transform || ''); return m ? +m[1] : 0; });
+  const et = movil ? 'móvil' : 'escritorio';
+  const t0 = await tx();
+  await bajarA(page, '#pano', 300);
+  const t1 = await tx();
+  comprobar(t1 < t0 - 20, `${et}: el scroll recorre la panorámica`, [t0, t1]);
+  const r = await page.evaluate(() => { const b = document.getElementById('pano').getBoundingClientRect(); return { y: b.top + b.height / 2, w: innerWidth }; });
+  if (movil) {
+    const cdp = await ctx.newCDPSession(page);
+    const toque = (t, x, y) => cdp.send('Input.dispatchTouchEvent', { type: t, touchPoints: t === 'touchEnd' ? [] : [{ x, y }] });
+    await toque('touchStart', 120, r.y);
+    for (let i = 1; i <= 10; i++) { await toque('touchMove', 120 + i * 14, r.y); await page.waitForTimeout(16); }
+    await toque('touchEnd', 0, 0);
+  } else {
+    await page.mouse.move(400, r.y); await page.mouse.down();
+    for (let i = 1; i <= 10; i++) { await page.mouse.move(400 + i * 20, r.y); await page.waitForTimeout(16); }
+    await page.mouse.up();
+  }
+  await page.waitForTimeout(1200);
+  const t2 = await tx();
+  comprobar(t2 > t1 + 20 || t2 === 0, `${et}: arrastrar a la derecha desplaza la foto (se ve lo de la izquierda)`, [t1, t2]);
+  const rango = await page.evaluate(() => document.getElementById('pano-riel').offsetWidth - document.getElementById('pano').clientWidth);
+  comprobar(t2 <= 0.5 && t2 >= -rango - 0.5, `${et}: la foto no se sale de sus límites`, [t2, rango]);
+  await ctx.close();
+}
+
 /* ================= 3. habitaciones ================= */
 console.log('\n3. Habitaciones');
 {

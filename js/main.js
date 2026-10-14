@@ -283,21 +283,66 @@
     return { medir, ensenar };
   })();
 
-  /* ============ 5. la panorámica se recorre con el scroll ============ */
+  /* ============ 5. la panorámica: el scroll la recorre y se puede arrastrar entera ============ */
   (function pano() {
     const caja = $('#pano'), riel = $('#pano-riel');
-    if (!caja || !riel) return;
-    // con dedo: scroll nativo, empezando donde está el sol (a la izquierda de la foto) y dejando ver que hay más
-    if (!fino) { const ini = () => { caja.scrollLeft = 0; }; ini(); return; }
-    if (!motion) return;
+    if (!caja || !riel || !motion) return;
     const img = $('img', riel);
+    let rango = 0, base = 0, extra = 0, x = 0, anim = 0;
+    const medir = () => { rango = Math.max(0, riel.offsetWidth - caja.clientWidth); };
+    const pintar = () => {
+      // lo que el scroll pone más lo que el usuario ha arrastrado, siempre dentro de la foto
+      x = Math.max(-rango, Math.min(0, base + extra));
+      riel.style.transform = `translate3d(${f(x)}px,0,0)`;
+    };
     const crear = () => {
-      const rango = () => Math.max(0, riel.offsetWidth - caja.clientWidth);
-      if (rango() < 10) return;
-      gsap.fromTo(riel, { x: 0 }, {
-        x: () => -rango(), ease: 'none',
-        scrollTrigger: { trigger: caja, start: 'top bottom', end: 'bottom top', scrub: 0.6, invalidateOnRefresh: true },
+      medir();
+      if (rango < 10) return;
+      ScrollTrigger.create({
+        trigger: caja, start: 'top bottom', end: 'bottom top', invalidateOnRefresh: true,
+        onRefresh: medir,
+        onUpdate: (st) => { base = -rango * st.progress; pintar(); },
       });
+      // arrastre con inercia; el scroll vertical sigue siendo de la página (touch-action: pan-y)
+      let px0 = 0, py0 = 0, e0 = 0, arr = false, cap = false, ult = [];
+      caja.addEventListener('pointerdown', (e) => {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        cancelAnimationFrame(anim);
+        arr = true; cap = false; px0 = e.clientX; py0 = e.clientY; e0 = extra; ult = [{ t: performance.now(), x: extra }];
+      });
+      caja.addEventListener('pointermove', (e) => {
+        if (!arr) return;
+        const dx = e.clientX - px0, dy = e.clientY - py0;
+        if (!cap) {
+          if (Math.abs(dx) < 6 || Math.abs(dx) < Math.abs(dy)) return;
+          cap = true; caja.classList.add('es-agarrado');
+          try { caja.setPointerCapture(e.pointerId); } catch (err) {}
+        }
+        extra = e0 + dx; pintar();
+        ult.push({ t: performance.now(), x: extra });
+        if (ult.length > 6) ult.shift();
+      });
+      const soltar = () => {
+        if (!arr) return;
+        arr = false; caja.classList.remove('es-agarrado');
+        if (!cap) return;
+        const a = ult[0], b = ult[ult.length - 1];
+        const v = b && a && b.t > a.t ? (b.x - a.x) / (b.t - a.t) : 0;
+        const destino = extra + Math.max(-1.6, Math.min(1.6, v)) * 320;
+        const x0 = extra, t0 = performance.now();
+        const paso = (ahora) => {
+          const t = Math.min(1, (ahora - t0) / 900);
+          extra = x0 + (destino - x0) * (1 - Math.pow(1 - t, 3));
+          // al topar con un extremo, el exceso se descarta para que no «pese» al volver a hacer scroll
+          const total = base + extra;
+          if (total > 0) extra = -base; else if (total < -rango) extra = -rango - base;
+          pintar();
+          if (t < 1) anim = requestAnimationFrame(paso);
+        };
+        anim = requestAnimationFrame(paso);
+      };
+      caja.addEventListener('pointerup', soltar);
+      caja.addEventListener('pointercancel', soltar);
     };
     if (img.complete) crear(); else img.addEventListener('load', () => { crear(); ScrollTrigger.refresh(); }, { once: true });
   })();
