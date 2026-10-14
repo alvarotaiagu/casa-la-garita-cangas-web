@@ -286,7 +286,10 @@
   /* ============ 5. la panorámica se recorre con el scroll ============ */
   (function pano() {
     const caja = $('#pano'), riel = $('#pano-riel');
-    if (!caja || !riel || !motion) return;
+    if (!caja || !riel) return;
+    // con dedo: scroll nativo, empezando donde está el sol (a la izquierda de la foto) y dejando ver que hay más
+    if (!fino) { const ini = () => { caja.scrollLeft = 0; }; ini(); return; }
+    if (!motion) return;
     const img = $('img', riel);
     const crear = () => {
       const rango = () => Math.max(0, riel.offsetWidth - caja.clientWidth);
