@@ -193,6 +193,7 @@ html:not(.js) .cortina { display: none; }
 }
 .cab__logo { display: flex; align-items: center; gap: 12px; height: 46px; flex: none; text-decoration: none; }
 .cab__marca { height: 100%; width: auto; color: currentColor; aspect-ratio: 388.99 / 335.84; }
+.cab__marca > path { opacity: .4; }
 .cab__nombre { font-family: var(--letra-tit); font-size: 1.7rem; line-height: .9; letter-spacing: .005em; }
 .cab__nombre small { display: block; font: 700 .62rem/1 var(--letra); letter-spacing: .24em; text-transform: uppercase; margin-top: 6px; opacity: .85; }
 .cab__nav { display: flex; gap: 26px; margin-left: auto; }

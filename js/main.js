@@ -530,11 +530,43 @@
 
   /* ============ 10. cabecera, menú y anclas ============ */
   const cab = $('#cab');
+
+  /* la garita de la cabecera se llena como la marea con el scroll: es el indicador de lectura */
+  const marea = (function () {
+    const svg = $('#cab-garita');
+    if (!svg) return () => {};
+    const NS = 'http://www.w3.org/2000/svg';
+    const base = $('path', svg);
+    const d = base.getAttribute('d');
+    const defs = document.createElementNS(NS, 'defs');
+    const cp = document.createElementNS(NS, 'clipPath');
+    cp.setAttribute('id', 'cab-recorte');
+    const cpp = document.createElementNS(NS, 'path');
+    cpp.setAttribute('d', d);
+    cp.appendChild(cpp); defs.appendChild(cp);
+    const g = document.createElementNS(NS, 'g');
+    g.setAttribute('clip-path', 'url(#cab-recorte)');
+    const gx = document.createElementNS(NS, 'g');
+    const ola = document.createElementNS(NS, 'path');
+    const Wd = svg.viewBox.baseVal.width, L = Wd / 2, A = 7;
+    let p = `M${-L},0`;
+    for (let i = 0; i < 6; i++) p += `q${f(L / 4)},${-A * 2} ${f(L / 2)},0 t${f(L / 2)},0`;
+    ola.setAttribute('d', p + `V420H${-L}Z`);
+    ola.setAttribute('fill', 'currentColor');
+    gx.appendChild(ola); g.appendChild(gx);
+    svg.insertBefore(defs, base);
+    svg.appendChild(g);
+    svg.classList.add('es-indicador');
+    if (motion) gsap.to(gx, { x: -L, duration: 3.6, ease: 'none', repeat: -1 });
+    return (prog) => ola.setAttribute('transform', `translate(0 ${f(352 - prog * 358)})`);
+  })();
   const oscuras = $$('.hero, .fuera, .consulta, .pie');
   let pendienteCab = 0;
   const alScroll = () => {
     pendienteCab = 0;
     cab.classList.toggle('sc', scrollY > 24);
+    const total = document.documentElement.scrollHeight - innerHeight;
+    marea(total > 0 ? Math.max(0, Math.min(1, scrollY / total)) : 0);
     const y = cab.offsetHeight / 2;
     cab.classList.toggle('es-oscura', oscuras.some((s) => { const r = s.getBoundingClientRect(); return r.top <= y && r.bottom > y; }));
   };
