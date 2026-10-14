@@ -1,0 +1,11 @@
+{
+  "name": "Casa Rural La Garita",
+  "short_name": "La Garita",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#11462b",
+  "theme_color": "#11462b",
+  "icons": [
+    { "src": "marca/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

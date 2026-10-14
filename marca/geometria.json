@@ -1,0 +1,94 @@
+{
+  "lienzo": {
+    "w": 857,
+    "h": 640,
+    "viewBox": "0 0 857 640",
+    "nota": "1 unidad = 1 px del PNG original (LOGO_LA_GARITA_CUADRADO.png); origen 0,0 = esquina superior izquierda"
+  },
+  "garita": {
+    "archivo": "garita.svg",
+    "viewBox": "0 0 388.99 335.84",
+    "caja": {
+      "x": 234.33,
+      "y": 0.11,
+      "w": 388.99,
+      "h": 335.84
+    },
+    "transform": "translate(234.33 0.11)",
+    "color_original": "#547D64"
+  },
+  "garita_solida": {
+    "archivo": "garita-solida.svg",
+    "viewBox": "0 0 388.9 336.03",
+    "caja": {
+      "x": 234.35,
+      "y": 0.14,
+      "w": 388.9,
+      "h": 336.03
+    },
+    "transform": "translate(234.35 0.14)"
+  },
+  "punto": {
+    "archivo": "punto.svg",
+    "viewBox": "0 0 22.67 17.86",
+    "caja": {
+      "x": 308.49,
+      "y": 320.31,
+      "w": 22.67,
+      "h": 17.86
+    },
+    "transform": "translate(308.49 320.31)",
+    "color_original": "#11462B",
+    "nota": "mota de tinta oscura bajo la base de la garita; está en logo.svg, no en garita.svg"
+  },
+  "texto": {
+    "archivo": "texto.svg",
+    "viewBox": "0 0 855.46 274.31",
+    "caja": {
+      "x": 0.83,
+      "y": 364.9,
+      "w": 855.46,
+      "h": 274.31
+    },
+    "transform": "translate(0.83 364.9)",
+    "renglones": {
+      "t1": {
+        "texto": "La garita",
+        "caja": {
+          "x": 0.83,
+          "y": 364.9,
+          "w": 853.79,
+          "h": 274.3
+        },
+        "color_original": "#11462B",
+        "caja_en_texto_svg": {
+          "x": 0.0,
+          "y": 0.0,
+          "w": 853.79,
+          "h": 274.3
+        }
+      },
+      "t2": {
+        "texto": "CASA RURAL",
+        "caja": {
+          "x": 436.37,
+          "y": 559.12,
+          "w": 419.92,
+          "h": 53.28
+        },
+        "color_original": "#96C22B",
+        "caja_en_texto_svg": {
+          "x": 435.54,
+          "y": 194.22,
+          "w": 419.92,
+          "h": 53.28
+        }
+      }
+    }
+  },
+  "logo_svg": {
+    "archivo": "logo.svg",
+    "viewBox": "0 0 857 640",
+    "nota": "garita.svg y texto.svg casan sobre logo.svg con el transform indicado en cada uno"
+  }
+}

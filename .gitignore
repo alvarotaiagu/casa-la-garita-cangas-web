@@ -1,0 +1,5 @@
+ref/
+scripts/.cache/
+scripts/__pycache__/
+pruebas/
+node_modules/

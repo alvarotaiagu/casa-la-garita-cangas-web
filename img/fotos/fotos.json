@@ -1,0 +1,571 @@
+[
+ {
+  "nombre": "hero-atardecer",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1921
+  ],
+  "ancho": 1921,
+  "alto": 1081,
+  "origen": "2022_04_Puesta-de-Sol-en-La-Garita.jpg",
+  "ancho_origen": 1921,
+  "alto_origen": 1081
+ },
+ {
+  "nombre": "panoramica",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   2200
+  ],
+  "ancho": 2200,
+  "alto": 579,
+  "origen": "2022_04_PANO_20211012_195209_PEQ.jpg",
+  "ancho_origen": 2500,
+  "alto_origen": 658
+ },
+ {
+  "nombre": "punta-aerea",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1921
+  ],
+  "ancho": 1921,
+  "alto": 800,
+  "origen": "2022_04_la_garita.jpg",
+  "ancho_origen": 1921,
+  "alto_origen": 800
+ },
+ {
+  "nombre": "cala-aerea",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   2001
+  ],
+  "ancho": 2001,
+  "alto": 1049,
+  "origen": "2023_05_CABECERA-CONTACTO.jpg",
+  "ancho_origen": 2001,
+  "alto_origen": 1049
+ },
+ {
+  "nombre": "casa-aerea",
+  "anchos": [
+   480,
+   800,
+   1078
+  ],
+  "ancho": 1078,
+  "alto": 934,
+  "origen": "2022_04_Casa-Rural-La-Garita.jpg",
+  "ancho_origen": 1078,
+  "alto_origen": 934
+ },
+ {
+  "nombre": "casa-jardin",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   2001
+  ],
+  "ancho": 2001,
+  "alto": 1048,
+  "origen": "2023_04_La-Garita_La-Casa_001.jpg",
+  "ancho_origen": 2001,
+  "alto_origen": 1048
+ },
+ {
+  "nombre": "casa-fachada",
+  "anchos": [
+   480,
+   800,
+   853
+  ],
+  "ancho": 853,
+  "alto": 825,
+  "origen": "2023_04_La-Garita_La-Casa.jpg",
+  "ancho_origen": 853,
+  "alto_origen": 825
+ },
+ {
+  "nombre": "playa-rodeira",
+  "anchos": [
+   480,
+   800,
+   1078
+  ],
+  "ancho": 1078,
+  "alto": 934,
+  "origen": "2023_04_Casa-Rural-La-Garita-en-la-playa-de-Rodeira.jpg",
+  "ancho_origen": 1078,
+  "alto_origen": 934
+ },
+ {
+  "nombre": "rodeira-vista",
+  "anchos": [
+   480,
+   800
+  ],
+  "ancho": 800,
+  "alto": 544,
+  "origen": "2023_04_rodeira.jpg",
+  "ancho_origen": 800,
+  "alto_origen": 544
+ },
+ {
+  "nombre": "jardin",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 854,
+  "origen": "2023_04_jardin.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 854
+ },
+ {
+  "nombre": "kayak-minigolf",
+  "anchos": [
+   480,
+   800
+  ],
+  "ancho": 800,
+  "alto": 854,
+  "origen": "2023_04_kayak.jpg",
+  "ancho_origen": 800,
+  "alto_origen": 854
+ },
+ {
+  "nombre": "jardin-pinos",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1921
+  ],
+  "ancho": 1921,
+  "alto": 801,
+  "origen": "2023_05_Jardin-y-Playa-en-Casa-La-Garita.jpg",
+  "ancho_origen": 1921,
+  "alto_origen": 801
+ },
+ {
+  "nombre": "garita-piedra",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   2001
+  ],
+  "ancho": 2001,
+  "alto": 1049,
+  "origen": "2023_05_tarifas.jpg",
+  "ancho_origen": 2001,
+  "alto_origen": 1049
+ },
+ {
+  "nombre": "garita-bn",
+  "anchos": [
+   480,
+   800
+  ],
+  "ancho": 800,
+  "alto": 800,
+  "origen": "2023_05_GARITA.jpg",
+  "ancho_origen": 800,
+  "alto_origen": 800
+ },
+ {
+  "nombre": "galeria-catalejo",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 544,
+  "origen": "2023_04_LACASA2-16.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 544
+ },
+ {
+  "nombre": "sala",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 854,
+  "origen": "2023_04_Sala.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 854
+ },
+ {
+  "nombre": "escalera",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 544,
+  "origen": "2023_04_LACASA2-16477.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 544
+ },
+ {
+  "nombre": "anochecer",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_anochecer.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "puesta-dorada",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 543,
+  "origen": "2023_04_puesta-sol.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 543
+ },
+ {
+  "nombre": "atardecer-arbol",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1921
+  ],
+  "ancho": 1921,
+  "alto": 801,
+  "origen": "2022_04_puesta_sol_la_garita.jpg",
+  "ancho_origen": 1921,
+  "alto_origen": 801
+ },
+ {
+  "nombre": "atardecer-pinos",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1921
+  ],
+  "ancho": 1921,
+  "alto": 801,
+  "origen": "2023_04_puesta_sol_la_garita-003.jpg",
+  "ancho_origen": 1921,
+  "alto_origen": 801
+ },
+ {
+  "nombre": "rodeira-cama",
+  "anchos": [
+   480,
+   800,
+   1078
+  ],
+  "ancho": 1078,
+  "alto": 934,
+  "origen": "2022_04_habitacion_cabecera_portada.jpg",
+  "ancho_origen": 1078,
+  "alto_origen": 934
+ },
+ {
+  "nombre": "rodeira-cama-2",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 934,
+  "origen": "2023_04_Habitacion_Rodeira_003.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 934
+ },
+ {
+  "nombre": "rodeira-vista-ria",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_Habitacion_Rodeira_004.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "rodeira-vista-muelle",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_Habitacion_Rodeira_005.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "solano-hab",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_SOLANO_001.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "solano-terraza",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 934,
+  "origen": "2023_04_SOLANO_002.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 934
+ },
+ {
+  "nombre": "solano-cama",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_SOLANO_009.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "amencer-hab",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_Solpor_001.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "amencer-balcon",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 934,
+  "origen": "2023_04_Solpor_002.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 934
+ },
+ {
+  "nombre": "amencer-cafetera",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 744,
+  "origen": "2023_04_Nevera-cafetera-y-balcon-en-Casa-La-Garita.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 744
+ },
+ {
+  "nombre": "cangas-hab",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_Cangas_001.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "cangas-vista",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 934,
+  "origen": "2023_04_Cangas_002.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 934
+ },
+ {
+  "nombre": "cangas-abuhardillada",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 744,
+  "origen": "2022_04_Habitacion-en-Casa-La-Garita_004.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 744
+ },
+ {
+  "nombre": "morrazo-hab",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_Morrazo_001.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "morrazo-vista",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 934,
+  "origen": "2023_04_Morrazo_002.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 934
+ },
+ {
+  "nombre": "marina-terraza",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1921
+  ],
+  "ancho": 1921,
+  "alto": 1251,
+  "origen": "2022_04_Apartamento-en-Casa-La-Garita_000.jpg",
+  "ancho_origen": 1921,
+  "alto_origen": 1251
+ },
+ {
+  "nombre": "marina-terraza-v",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1281
+  ],
+  "ancho": 1281,
+  "alto": 1605,
+  "origen": "2022_04_Apartamento-en-Casa-La-Garita_001.jpg",
+  "ancho_origen": 1281,
+  "alto_origen": 1605
+ },
+ {
+  "nombre": "marina-cocina",
+  "anchos": [
+   480,
+   800,
+   1079
+  ],
+  "ancho": 1079,
+  "alto": 935,
+  "origen": "2022_04_Apartamento-en-Casa-La-Garita_003.jpg",
+  "ancho_origen": 1079,
+  "alto_origen": 935
+ },
+ {
+  "nombre": "marina-salon",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 503,
+  "origen": "2023_04_Apartamento-en-Casa-La-Garita_006.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 503
+ },
+ {
+  "nombre": "marina-dormitorio",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 936,
+  "origen": "2023_04_Apartamento-en-Casa-La-Garita_007.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 936
+ },
+ {
+  "nombre": "marina-vista",
+  "anchos": [
+   480,
+   801
+  ],
+  "ancho": 801,
+  "alto": 854,
+  "origen": "2023_04_Apartamento_La-Garita_001.jpg",
+  "ancho_origen": 801,
+  "alto_origen": 854
+ },
+ {
+  "nombre": "desayuno",
+  "anchos": [
+   480,
+   800,
+   1080
+  ],
+  "ancho": 1080,
+  "alto": 1080,
+  "origen": "instagram/B1YGc0MpA2e.jpg",
+  "ancho_origen": 1080,
+  "alto_origen": 1080
+ },
+ {
+  "nombre": "dron",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 810,
+  "origen": "2020_09_24260486.jpg",
+  "ancho_origen": 1920,
+  "alto_origen": 810
+ }
+]

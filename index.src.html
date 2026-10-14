@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Casa Rural La Garita · Cangas do Morrazo · A pie de la playa de Rodeira</title>
+<meta name="description" content="Casa rural y apartamento a pie de la playa de Rodeira, en Cangas do Morrazo (Pontevedra): cinco habitaciones con baño privado, apartamento para cuatro, jardín con minigolf, kayaks y la puesta de sol sobre la ría. Aparcamiento gratis.">
+<meta name="theme-color" content="#11462B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Casa Rural La Garita · Cangas do Morrazo">
+<meta property="og:description" content="A pie de la playa de Rodeira, con la ría de ventana: cinco habitaciones, un apartamento, jardín, minigolf y kayaks.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- script bloqueante: clases antes del primer pintado -->
+<script>
+(function (d) {
+  var h = d.documentElement;
+  h.classList.add('js');
+  // MANDO DE MAQUETA (no viaja al cliente): solo con ?revision
+  try {
+    var q = new URLSearchParams(location.search);
+    if (q.has('revision')) {
+      h.classList.add('revision');
+      if (q.get('densidad') === 'sobria') h.classList.add('densidad-sobria');
+    }
+  } catch (e) {}
+  // red de seguridad por si main.js no llega: la cortina se va sola
+  window.__redCortina = setTimeout(function () { h.classList.add('cortina-fuera'); }, 6500);
+})(document);
+</script>
+
+<!-- la foto del hero (LCP) empieza a bajar antes que el CSS y los scripts -->
+<link rel="preload" as="image" type="image/avif" fetchpriority="high"
+      imagesrcset="img/fotos/hero-atardecer-800.avif 800w, img/fotos/hero-atardecer-1200.avif 1200w, img/fotos/hero-atardecer-1600.avif 1600w, img/fotos/hero-atardecer-1921.avif 1921w"
+      imagesizes="max(100vw, 178svh)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/estilos.css?v=0eb8b6a0">
+<link rel="icon" href="marca/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="marca/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="marca/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<noscript><style>.cortina{display:none!important}</style></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Casa Rural La Garita",
+  "description": "Casa rural y apartamento a pie de la playa de Rodeira, en Cangas do Morrazo.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Camino de la Garita, 25",
+    "addressLocality": "Cangas do Morrazo",
+    "postalCode": "36940",
+    "addressRegion": "Pontevedra",
+    "addressCountry": "ES"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 42.25942, "longitude": -8.76517 },
+  "telephone": "+34 617 633 166",
+  "email": "rural@casalagarita.com",
+  "numberOfRooms": 6,
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Aparcamiento privado gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Wifi gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Jardín, minigolf y barbacoa", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kayaks", "value": true }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="saltar" href="#principal">Saltar al contenido</a>
+
+<!-- ============ cortina: el portal de la garita ============
+     Primer pintado: la garita y el rótulo sobre el bosque (sin JS). Con JS, la
+     garita se vuelve una ventana (máscara) por la que se ve el hero, y esa
+     ventana crece hasta destapar toda la pantalla. -->
+<div class="cortina" id="cortina" aria-hidden="true">
+  <svg class="cortina__lienzo" id="cortina-lienzo" focusable="false" aria-hidden="true">
+    <defs>
+      <mask id="cortina-mascara" maskUnits="userSpaceOnUse">
+        <rect id="cortina-m-rect" x="0" y="0" fill="#fff"/>
+        <path id="cortina-m-hueco" fill="#000"/>
+      </mask>
+    </defs>
+    <rect id="cortina-fondo" class="cortina__fondo" x="0" y="0" mask="url(#cortina-mascara)"/>
+  </svg>
+  <div class="cortina__logo" id="cortina-logo">
+    <!--svg:marca/garita.svg id="cortina-garita" class="cortina__garita" focusable="false"-->
+    <!--svg:marca/texto.svg id="cortina-texto" class="cortina__texto" focusable="false"-->
+  </div>
+  <p class="cortina__txt" id="cortina-txt">Cangas do Morrazo · ría de Vigo</p>
+</div>
+
+<!-- ============ cabecera ============ -->
+<header class="cab" id="cab">
+  <div class="cab__env">
+    <a class="cab__logo" href="#inicio" aria-label="Casa Rural La Garita, al inicio">
+      <!--svg:marca/garita.svg id="cab-garita" class="cab__marca" aria-hidden="true" focusable="false"-->
+      <span class="cab__nombre" aria-hidden="true">La garita<small>Casa rural</small></span>
+    </a>
+    <nav class="cab__nav" aria-label="Principal">
+      <a href="#casa">La casa</a>
+      <a href="#habitaciones">Habitaciones</a>
+      <a href="#fuera">Fuera</a>
+      <a href="#entorno">La ría</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#llegar">Cómo llegar</a>
+    </nav>
+    <a class="btn btn--lima cab__cta" href="#consulta">Consultar fechas</a>
+    <button class="cab__menu" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil">
+      <span class="cab__menu-txt">Menú</span><span class="cab__menu-raya" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-movil" id="menu-movil" aria-hidden="true">
+  <nav aria-label="Menú">
+    <a href="#casa">La casa</a>
+    <a href="#habitaciones">Habitaciones</a>
+    <a href="#fuera">Fuera</a>
+    <a href="#entorno">La ría</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#llegar">Cómo llegar</a>
+    <a href="#consulta">Consultar fechas</a>
+  </nav>
+  <p class="menu-movil__tel"><a href="tel:+34617633166">617 633 166</a></p>
+</div>
+
+<main id="principal">
+
+<!-- ============ 1. hero: el mirador ============ -->
+<section class="hero" id="inicio" aria-labelledby="hero-tit">
+  <div class="mirador" id="mirador" tabindex="0" role="group" aria-roledescription="mirador" aria-label="Vista desde la garita: arrastre o use las flechas del teclado para mirar alrededor">
+    <div class="mirador__foto" id="mirador-foto">
+      <img data-foto="hero-atardecer" id="mirador-img" alt="Puesta de sol sobre la ría desde el jardín de la casa, con un árbol en primer plano y el minigolf bajo él" sizes="max(100vw, 178svh)" fetchpriority="high" loading="eager" draggable="false">
+    </div>
+    <div class="hero__velo" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero__env">
+    <p class="eti eti--claro">Casa rural · Cangas do Morrazo</p>
+    <h1 class="hero__tit" id="hero-tit" data-partir>Desde la garita se ve toda la&nbsp;ría.</h1>
+    <p class="hero__entra">Cinco habitaciones y un apartamento a pie de la playa de Rodeira, con jardín, minigolf, kayaks y la puesta de sol sobre la ría de&nbsp;Vigo.</p>
+    <div class="hero__acc">
+      <a class="btn btn--lima" href="#consulta">Consultar fechas</a>
+      <a class="btn btn--linea-claro" href="#habitaciones">Ver las habitaciones</a>
+    </div>
+  </div>
+
+  <div class="hero__pie">
+    <p class="hero__sol" id="sol-vivo">
+      <span class="hero__sol-disco" aria-hidden="true"></span>
+      <span id="sol-vivo-txt">La puesta de sol sobre la ría, cada tarde desde el jardín</span>
+    </p>
+    <div class="hero__mando" id="mirador-mando" hidden>
+      <button type="button" class="hero__flecha" id="mirador-izq" aria-label="Mirar a la izquierda"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <span class="hero__ayuda" id="mirador-ayuda">Arrastre para mirar alrededor</span>
+      <button type="button" class="hero__flecha" id="mirador-der" aria-label="Mirar a la derecha"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <p class="hero__coord" aria-hidden="true">42°15′33.9″ N · 8°45′54.6″ O</p>
+  </div>
+</section>
+
+<!-- ============ 2. la casa ============ -->
+<section class="casa" id="casa" aria-labelledby="casa-tit">
+  <div class="env casa__env">
+    <div class="casa__texto">
+      <p class="eti" data-lamina>La casa</p>
+      <h2 class="tit" id="casa-tit" data-partir>Una casa de familia, abierta a la orilla del mar.</h2>
+      <p class="casa__lead">Llevamos años recibiendo huéspedes en lo que fue nuestra casa familiar, convertida en alojamiento de turismo rural a la orilla del mar.</p>
+      <p class="casa__p">Te ofrecemos nuestro estilo de vida: un ambiente tranquilo, en un entorno natural incomparable, a unos veinte minutos andando del centro de Cangas, donde están la gastronomía, las fiestas y el ajetreo nocturno.</p>
+      <p class="casa__p">Del puerto salen los barcos a las Illas Cíes, para recorrer la ría entre las bateas o para ver las luces de Navidad de Vigo sin atascos ni problemas de aparcamiento. Cualquier estación del año es buena para venir.</p>
+      <ul class="cifras" aria-label="La casa en cifras">
+        <li data-revela><b class="cifras__n">5</b><span>habitaciones con baño privado</span></li>
+        <li data-revela><b class="cifras__n">1</b><span>apartamento para cuatro, hasta seis</span></li>
+        <li data-revela><b class="cifras__n">20</b><span>minutos a pie del centro de Cangas</span></li>
+      </ul>
+    </div>
+    <figure class="casa__garita" data-revela>
+      <div class="casa__garita-foto"><img data-foto="garita-piedra" alt="Una garita de piedra con cúpula sobre un monte, con el mar y las islas al fondo" sizes="(max-width: 899px) 90vw, 560px"></div>
+      <figcaption>Una garita de piedra, con el mar al fondo.</figcaption>
+    </figure>
+  </div>
+
+  <!-- la panorámica se recorre con el scroll (o con el teclado y el dedo) -->
+  <div class="pano" id="pano" tabindex="0" role="group" aria-label="Panorámica de la casa, el jardín y la playa de Rodeira al caer la tarde">
+    <div class="pano__riel" id="pano-riel">
+      <img data-foto="panoramica" alt="Panorámica al atardecer: el minigolf y la playa de Rodeira a la izquierda, con el sol sobre la ría, y la casa de color teja a la derecha, detrás de un seto" sizes="max(1500px, 100vw)" draggable="false">
+    </div>
+    <p class="pano__pie">La casa, el jardín y la playa de Rodeira, al caer la tarde.</p>
+  </div>
+</section>
+
+<div class="hilera" aria-hidden="true"></div>
+
+<!-- ============ 3. habitaciones ============ -->
+<section class="habs" id="habitaciones" aria-labelledby="habs-tit">
+  <div class="env">
+    <div class="habs__cab">
+      <p class="eti" data-lamina>Habitaciones y apartamento</p>
+      <h2 class="tit" id="habs-tit" data-partir>Cinco habitaciones y un apartamento, todos con la ría de&nbsp;fondo.</h2>
+      <p class="habs__lead">Todas las habitaciones son exteriores, con baño privado, calefacción, ventilador, televisión, wifi, nevera y cafetera para que puedas tomar algo sin salir. El desayuno va incluido.</p>
+    </div>
+
+    <nav class="habs__indice" aria-label="Ir a una habitación">
+      <p class="habs__planta"><span>Planta baja</span>
+        <a href="#hab-rodeira">Rodeira</a><a href="#hab-solano">Solano</a><a href="#hab-amencer">Amencer</a><a href="#hab-marina">Mariña</a></p>
+      <p class="habs__planta"><span>Planta alta</span>
+        <a href="#hab-cangas">Cangas</a><a href="#hab-morrazo">Morrazo</a></p>
+    </nav>
+
+    <ol class="habs__lista">
+
+      <!-- Rodeira -->
+      <li class="hab" id="hab-rodeira" data-hab="rodeira">
+        <div class="hab__fotos">
+          <div class="hab__foto hab__foto--a" data-revela><img data-foto="rodeira-cama" alt="Habitación Rodeira: cama doble con colcha gris bordada junto a la ventana" sizes="(max-width: 899px) 86vw, 520px"></div>
+          <div class="hab__foto hab__foto--b" data-revela><img data-foto="rodeira-vista-ria" alt="Vista de la ría y de Cangas desde la habitación Rodeira" sizes="(max-width: 899px) 50vw, 300px"></div>
+        </div>
+        <div class="hab__texto">
+          <p class="hab__sup">Planta baja · 2 personas</p>
+          <h3 class="hab__nom">Rodeira</h3>
+          <p class="hab__tipo">Doble con vistas al mar</p>
+          <p class="hab__txt">Tiene un gran ventanal sobre la playa de Rodeira. Podrás ver la puesta de sol sin salir de la habitación.</p>
+          <ul class="hab__datos">
+            <li>Cama doble de 1,50 × 1,90 m</li>
+            <li>Terraza privada</li>
+            <li>Vistas al mar y a la playa de Rodeira</li>
+          </ul>
+          <p class="hab__precio">Desde <b>70&nbsp;€</b> la noche <span>· desayuno incluido</span></p>
+          <a class="btn btn--linea" href="#consulta" data-elige="rodeira">Consultar esta</a>
+        </div>
+      </li>
+
+      <!-- Solano -->
+      <li class="hab hab--inv" id="hab-solano" data-hab="solano">
+        <div class="hab__fotos">
+          <div class="hab__foto hab__foto--a hab__foto--arco" data-revela><img data-foto="solano-terraza" alt="La pequeña terraza privada de Solano, con mesa y sillas sobre el seto del jardín" sizes="(max-width: 899px) 70vw, 400px"></div>
+          <div class="hab__foto hab__foto--b" data-revela><img data-foto="solano-hab" alt="Habitación Solano: cama doble, escritorio con nevera y puerta de cristal al jardín" sizes="(max-width: 899px) 55vw, 340px"></div>
+        </div>
+        <div class="hab__texto">
+          <p class="hab__sup">Planta baja · 2 personas</p>
+          <h3 class="hab__nom">Solano</h3>
+          <p class="hab__tipo">Doble con terraza</p>
+          <p class="hab__txt">Tiene una pequeña terraza con una mesa y dos sillas donde disfrutar, en privado, del jardín y de sus maravillosas vistas.</p>
+          <ul class="hab__datos">
+            <li>Cama doble de 1,50 × 1,90 m</li>
+            <li>Terraza privada con mesa y dos sillas</li>
+            <li>Vistas al mar y al jardín</li>
+          </ul>
+          <p class="hab__precio">Desde <b>60&nbsp;€</b> la noche <span>· desayuno incluido</span></p>
+          <a class="btn btn--linea" href="#consulta" data-elige="solano">Consultar esta</a>
+        </div>
+      </li>
+
+      <!-- Amencer -->
+      <li class="hab" id="hab-amencer" data-hab="amencer">
+        <div class="hab__fotos">
+          <div class="hab__foto hab__foto--a" data-revela><img data-foto="amencer-hab" alt="Habitación Amencer: cama doble con camino negro y ventanal al jardín" sizes="(max-width: 899px) 86vw, 520px"></div>
+          <div class="hab__foto hab__foto--b hab__foto--arco" data-revela><img data-foto="amencer-balcon" alt="El balcón acristalado de Amencer, con el jardín y la ría al fondo" sizes="(max-width: 899px) 45vw, 260px"></div>
+        </div>
+        <div class="hab__texto">
+          <p class="hab__sup">Planta baja · 2 personas</p>
+          <h3 class="hab__nom">Amencer</h3>
+          <p class="hab__tipo">Doble con balcón</p>
+          <p class="hab__txt">Tiene un balcón cerrado con cristal y unas estupendas vistas al jardín y al mar, donde ver amanecer.</p>
+          <ul class="hab__datos">
+            <li>Cama doble de 1,50 × 1,90 m</li>
+            <li>Balcón acristalado con vistas</li>
+            <li>Vistas al mar y al jardín</li>
+          </ul>
+          <p class="hab__precio">Desde <b>60&nbsp;€</b> la noche <span>· desayuno incluido</span></p>
+          <a class="btn btn--linea" href="#consulta" data-elige="amencer">Consultar esta</a>
+        </div>
+      </li>
+
+      <!-- Cangas -->
+      <li class="hab hab--inv" id="hab-cangas" data-hab="cangas">
+        <div class="hab__fotos">
+          <div class="hab__foto hab__foto--a hab__foto--arco" data-revela><img data-foto="cangas-vista" alt="Vista desde la habitación Cangas: el jardín, la playa y la ría de Cangas" sizes="(max-width: 899px) 70vw, 400px"></div>
+          <div class="hab__foto hab__foto--b" data-revela><img data-foto="cangas-hab" alt="Habitación Cangas: cama doble con cabecero de madera bajo el techo abuhardillado" sizes="(max-width: 899px) 55vw, 340px"></div>
+        </div>
+        <div class="hab__texto">
+          <p class="hab__sup">Planta alta · 2 personas</p>
+          <h3 class="hab__nom">Cangas</h3>
+          <p class="hab__tipo">Doble abuhardillada</p>
+          <p class="hab__txt">Muy amplia, con ventana al jardín, a la playa y a la ría de Cangas.</p>
+          <ul class="hab__datos">
+            <li>Cama doble de 1,50 × 1,90 m</li>
+            <li>Cama supletoria disponible, a consultar</li>
+            <li>Dos televisiones</li>
+          </ul>
+          <p class="hab__precio">Desde <b>60&nbsp;€</b> la noche <span>· desayuno incluido</span></p>
+          <a class="btn btn--linea" href="#consulta" data-elige="cangas">Consultar esta</a>
+        </div>
+      </li>
+
+      <!-- Morrazo -->
+      <li class="hab" id="hab-morrazo" data-hab="morrazo">
+        <div class="hab__fotos">
+          <div class="hab__foto hab__foto--a" data-revela><img data-foto="morrazo-hab" alt="Habitación Morrazo: paredes verdes, sillón y cama doble" sizes="(max-width: 899px) 86vw, 520px"></div>
+          <div class="hab__foto hab__foto--b hab__foto--arco" data-revela><img data-foto="morrazo-vista" alt="Vista de la ría y de las palmeras del jardín desde la habitación Morrazo" sizes="(max-width: 899px) 45vw, 260px"></div>
+        </div>
+        <div class="hab__texto">
+          <p class="hab__sup">Planta alta · 3 personas</p>
+          <h3 class="hab__nom">Morrazo</h3>
+          <p class="hab__tipo">Triple superior</p>
+          <p class="hab__txt">La habitación más grande, con una ventana y un ventanal para contemplar la ría de Cangas y el jardín.</p>
+          <ul class="hab__datos">
+            <li>Cama doble de 1,50 × 1,90 m y cama individual de 90 cm</li>
+            <li>Cama supletoria disponible, a consultar</li>
+            <li>Zona de descanso, dos armarios y dos televisiones</li>
+          </ul>
+          <p class="hab__precio">Desde <b>70&nbsp;€</b> la noche <span>· desayuno incluido</span></p>
+          <a class="btn btn--linea" href="#consulta" data-elige="morrazo">Consultar esta</a>
+        </div>
+      </li>
+
+      <!-- Mariña -->
+      <li class="hab hab--inv hab--ap" id="hab-marina" data-hab="marina">
+        <div class="hab__fotos">
+          <div class="hab__foto hab__foto--a" data-revela><img data-foto="marina-terraza" alt="La terraza del apartamento Mariña: suelo de baldosa, mesa con sillas y la fachada de piedra" sizes="(max-width: 899px) 86vw, 560px"></div>
+          <div class="hab__foto hab__foto--b" data-revela><img data-foto="marina-vista" alt="Vista al mar desde la terraza del apartamento, con maceta de flores" sizes="(max-width: 899px) 50vw, 300px"></div>
+        </div>
+        <div class="hab__texto">
+          <p class="hab__sup">En la parte baja de la casa · 4 personas, hasta 6</p>
+          <h3 class="hab__nom">Mariña</h3>
+          <p class="hab__tipo">Apartamento</p>
+          <p class="hab__txt">Salón con sofá y televisión, comedor, cocina, baño y una amplia terraza con salida al jardín y vistas espectaculares al mar y a la playa de Rodeira.</p>
+          <ul class="hab__datos">
+            <li>Un dormitorio con cama doble y otro con dos camas individuales</li>
+            <li>Cocina con placa, nevera, microondas, tostadora y cafetera</li>
+            <li>Terraza con mesa, sillas y banco</li>
+          </ul>
+          <p class="hab__precio">Desde <b>70&nbsp;€</b> la noche <span>· para 4 personas, desayuno no incluido</span></p>
+          <a class="btn btn--linea" href="#consulta" data-elige="marina">Consultar este</a>
+        </div>
+      </li>
+    </ol>
+
+    <p class="habs__nota">Precios desde, en temporada baja. En temporada alta, consultar. Para menos de cuatro personas en el apartamento, consultar el precio. Baño privado con ducha, secador, toallas y amenities en todas.</p>
+
+    <!-- solo «Sobria»: las seis de un vistazo (cambia dibujo por dato) -->
+    <div class="tabla-habs" id="tabla-habs">
+      <table>
+        <caption>Las seis, de un vistazo</caption>
+        <thead><tr><th scope="col">Nombre</th><th scope="col">Dónde</th><th scope="col">Personas</th><th scope="col">Lo mejor</th><th scope="col">Desde</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Rodeira</th><td>Planta baja</td><td>2</td><td>Ventanal sobre la playa; puesta de sol</td><td>70&nbsp;€</td></tr>
+          <tr><th scope="row">Solano</th><td>Planta baja</td><td>2</td><td>Terraza privada sobre el jardín</td><td>60&nbsp;€</td></tr>
+          <tr><th scope="row">Amencer</th><td>Planta baja</td><td>2</td><td>Balcón acristalado; amanecer</td><td>60&nbsp;€</td></tr>
+          <tr><th scope="row">Cangas</th><td>Planta alta</td><td>2 (+1)</td><td>Abuhardillada, muy amplia</td><td>60&nbsp;€</td></tr>
+          <tr><th scope="row">Morrazo</th><td>Planta alta</td><td>3 (+1)</td><td>La más grande, con zona de descanso</td><td>70&nbsp;€</td></tr>
+          <tr><th scope="row">Mariña</th><td>Parte baja</td><td>4 (hasta 6)</td><td>Apartamento con cocina y terraza</td><td>70&nbsp;€</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. fuera ============ -->
+<section class="fuera" id="fuera" aria-labelledby="fuera-tit">
+  <div class="env fuera__env">
+    <div class="fuera__texto">
+      <p class="eti eti--claro" data-lamina>Fuera de la puerta</p>
+      <h2 class="tit" id="fuera-tit" data-partir>El jardín llega hasta la&nbsp;orilla.</h2>
+      <p class="fuera__lead">Un jardín amplio, con zonas verdes, mesas para comer al aire libre, columpios y una terraza común desde la que se ve la puesta de sol. La playa de Rodeira está al otro lado de la carretera, con un paseo que lleva a Cangas.</p>
+      <ul class="fuera__lista">
+        <li><b>Minigolf y kayaks</b><span>Para los huéspedes.</span></li>
+        <li><b>Barbacoa</b><span>En el jardín.</span></li>
+        <li><b>Aparcamiento privado</b><span>Gratuito, dentro de la finca.</span></li>
+        <li><b>Desayuno</b><span>Incluido en las habitaciones, en la sala acristalada que mira a la ría.</span></li>
+        <li><b>Sala común</b><span>Sofás, equipo de música, televisión, juegos y una mesa grande.</span></li>
+        <li><b>Por la costa</b><span>El mirador de Punta Rodeira y las playas de Alemanes, Ratas y Canabal, siguiendo el camino de la orilla.</span></li>
+      </ul>
+      <a class="btn btn--linea-claro" href="#entorno">Ver la ría en el mapa</a>
+    </div>
+    <div class="fuera__fotos">
+      <div class="fuera__foto fuera__foto--a" data-revela><img data-foto="dron" alt="Vista desde un dron: la casa de teja entre árboles, el minigolf junto a la orilla y la cala de rocas con el agua turquesa" sizes="(max-width: 899px) 92vw, 640px"></div>
+      <div class="fuera__foto fuera__foto--b fuera__foto--arco" data-revela><img data-foto="kayak-minigolf" alt="Minigolf sobre el césped con dos kayaks y la playa de Rodeira al fondo" sizes="(max-width: 899px) 55vw, 300px"></div>
+      <div class="fuera__foto fuera__foto--c" data-revela><img data-foto="desayuno" alt="Mesa de desayuno servida junto a los ventanales de la sala, con un catalejo mirando a la ría" sizes="(max-width: 899px) 55vw, 300px"></div>
+    </div>
+  </div>
+</section>
+
+<div class="hilera hilera--oscura" aria-hidden="true"></div>
+
+<!-- ============ 5. la ría ============ -->
+<section class="entorno" id="entorno" aria-labelledby="entorno-tit">
+  <div class="env">
+    <div class="entorno__cab">
+      <p class="eti" data-lamina>La ría</p>
+      <h2 class="tit" id="entorno-tit" data-partir>Todo lo que hay alrededor, en minutos de verdad.</h2>
+      <p class="entorno__lead">Los tiempos salen de calcular la ruta desde la puerta de la casa con los mapas de OpenStreetMap: a pie para lo que está cerca, en coche para lo demás. Los barcos van aparte.</p>
+    </div>
+    <div class="entorno__cuerpo">
+      <div class="lamina" id="lamina">
+        <canvas class="lamina__lienzo" id="lamina-lienzo" aria-hidden="true"></canvas>
+        <p class="lamina__fuente">Mapa: © colaboradores de OpenStreetMap (ODbL)</p>
+      </div>
+      <div class="lugares" id="lugares">
+        <div class="filtros filtros--lugares" role="group" aria-label="Filtrar lugares">
+          <button type="button" class="filtro" data-tipo="todos" aria-pressed="true">Todo</button>
+          <button type="button" class="filtro" data-tipo="pie" aria-pressed="false">A pie</button>
+          <button type="button" class="filtro" data-tipo="playa" aria-pressed="false">Playas</button>
+          <button type="button" class="filtro" data-tipo="barco" aria-pressed="false">En barco</button>
+        </div>
+        <p class="lamina__sol" id="lamina-sol" hidden></p>
+        <ol class="lugares__lista" id="lugares-lista">
+          <li class="lugares__sin-js">La playa de Rodeira, enfrente · el centro y el puerto de Cangas, a unos 20 minutos andando · el barco a las Illas Cíes y a Vigo, desde el puerto · Moaña, al otro lado de la ría.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. opiniones ============ -->
+<section class="opi" id="opiniones" aria-labelledby="opi-tit">
+  <div class="env">
+    <p class="eti eti--claro" data-lamina>Opiniones</p>
+    <h2 class="tit" id="opi-tit" data-partir>Lo que cuentan quienes se han&nbsp;alojado.</h2>
+    <p class="opi__fuente">Notas leídas en octubre de 2026. Las opiniones se reproducen tal cual, con el nombre y el país con los que las firmaron en Booking.com, Tripadvisor y Google Maps.</p>
+    <ul class="opi__notas" aria-label="Notas en las plataformas">
+      <li><b>9,2</b><span>Booking.com · «Fantástico»</span></li>
+      <li><b>4,7</b><span>Google Maps · sobre 5</span></li>
+    </ul>
+    <ul class="opi__lista">
+      <li class="opi__item opi__item--g" data-revela>
+        <blockquote><p>La ubicación es extraordinaria, contigua a la ría y a la playa. En cuanto al desayuno destacaría el zumo natural, las tortitas y los bizcochos tradicionales típicos de la zona, junto a ello tostadas con diferentes tipos de pan, aceite de oliva virgen extra, tomate y café para servirte a tu gusto. […] El parking privado sin coste adicional en la finca de la casa, fundamental en un lugar tan frecuentado y difícil de aparcar como este.</p></blockquote>
+        <p class="opi__quien">Francisco · España · 10/10</p>
+      </li>
+      <li class="opi__item" data-revela>
+        <blockquote><p>Ubicación perfecta. Bonito chalet ubicado en una parcela grande y bien preparada rodeada de mar. Vistas al mar desde toda la casa y parcela.</p></blockquote>
+        <p class="opi__quien">David L · España · 5/5</p>
+      </li>
+      <li class="opi__item" data-revela>
+        <blockquote><p>Tranquilo, a pie de playa, apartado y andando al pueblo en un momento. […] Sobre todo la tranquilidad para dormir: solo se escuchaban las olas del mar.</p></blockquote>
+        <p class="opi__quien">Viajera Dicharachera · España · 5/5 · apartamento</p>
+      </li>
+      <li class="opi__item" data-revela>
+        <blockquote><p>Volveremos a Cangas do Morrazo. La ubicación, una maravilla. Unas vistas súper bonitas. El desayuno exquisito. Y Jesús nos facilitó información sobre la historia de la zona muy acertada, y recomendaciones culinarias.</p></blockquote>
+        <p class="opi__quien">María · España · 10/10</p>
+      </li>
+      <li class="opi__item" data-revela>
+        <blockquote><p>La habitación con vistas a la ría de Vigo tenía una pequeña terraza con unas vistas espectaculares. La limpieza, de 10. Se puede ir caminando al centro de Cangas por un paseo que hay a la orilla de la playa.</p></blockquote>
+        <p class="opi__quien">Loli · España · 8 días de estancia</p>
+      </li>
+      <li class="opi__item opi__item--corta" data-revela>
+        <blockquote><p lang="fr">Petit déjeuner varié, emplacement exceptionnel, vue mer.</p></blockquote>
+        <p class="opi__quien">Patrick · Francia · 10/10</p>
+      </li>
+    </ul>
+    <p class="opi__ver">
+      <a class="enlace" href="https://www.booking.com/reviews/es/hotel/la-garita-casa-rural.es.html" rel="noopener" target="_blank">Más opiniones en Booking.com</a> ·
+      <a class="enlace" href="https://www.tripadvisor.es/Hotel_Review-g1064086-d3249776-Reviews-Casa_Rural_la_Garita-Cangas_do_Morrazo_Province_of_Pontevedra_Galicia.html" rel="noopener" target="_blank">en Tripadvisor</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 7. consulta ============ -->
+<section class="consulta" id="consulta" aria-labelledby="consulta-tit">
+  <div class="env consulta__env">
+    <div class="consulta__texto">
+      <p class="eti eti--claro" data-lamina>Consultar fechas</p>
+      <h2 class="tit" id="consulta-tit" data-partir>Cuéntanos cuándo quieres venir.</h2>
+      <p>Te respondemos con la disponibilidad y el precio de tus fechas. El formulario escribe el mensaje por ti: lo envías tú desde tu WhatsApp o tu correo.</p>
+      <ul class="consulta__vias">
+        <li><a href="tel:+34617633166">617 633 166</a><span>Teléfono</span></li>
+        <li><a href="mailto:rural@casalagarita.com">rural@casalagarita.com</a><span>Correo</span></li>
+      </ul>
+    </div>
+    <form class="form" id="form-consulta" novalidate>
+      <div class="form__fila">
+        <div class="campo"><label for="c-entrada">Llegada</label><input type="date" id="c-entrada" name="entrada" required></div>
+        <div class="campo"><label for="c-salida">Salida</label><input type="date" id="c-salida" name="salida" required></div>
+      </div>
+      <div class="form__fila">
+        <div class="campo"><label for="c-adultos">Adultos</label>
+          <select id="c-adultos" name="adultos"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+        <div class="campo"><label for="c-ninos">Niños</label>
+          <select id="c-ninos" name="ninos"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      </div>
+      <div class="campo"><label for="c-hab">Habitación</label>
+        <select id="c-hab" name="hab">
+          <option value="">La que esté libre</option>
+          <option value="rodeira">Rodeira · doble con vistas al mar</option>
+          <option value="solano">Solano · doble con terraza</option>
+          <option value="amencer">Amencer · doble con balcón</option>
+          <option value="cangas">Cangas · doble abuhardillada</option>
+          <option value="morrazo">Morrazo · triple superior</option>
+          <option value="marina">Mariña · apartamento para 4</option>
+        </select></div>
+      <div class="campo"><label for="c-nombre">Tu nombre</label><input type="text" id="c-nombre" name="nombre" autocomplete="name" required></div>
+      <div class="campo"><label for="c-nota">Algo más <span class="campo__opc">(opcional)</span></label><textarea id="c-nota" name="nota" rows="3"></textarea></div>
+      <p class="form__error" id="form-error" role="alert" hidden></p>
+      <div class="form__acc">
+        <button class="btn btn--lima" type="submit" data-via="whatsapp">Escribir por WhatsApp</button>
+        <button class="btn btn--linea-claro" type="submit" data-via="correo">Por correo</button>
+      </div>
+      <p class="form__legal">No enviamos nada por tu cuenta: se abre tu WhatsApp o tu correo con el mensaje escrito. <a href="privacidad.html">Privacidad</a></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 8. cómo llegar ============ -->
+<section class="llegar" id="llegar" aria-labelledby="llegar-tit">
+  <div class="env llegar__env">
+    <div class="llegar__texto">
+      <p class="eti" data-lamina>Cómo llegar</p>
+      <h2 class="tit" id="llegar-tit" data-partir>A la orilla de la playa de&nbsp;Rodeira.</h2>
+      <address>Camino de la Garita, 25 · Rodeira<br>36940 Cangas do Morrazo (Pontevedra)</address>
+      <ul class="rutas" id="rutas">
+        <li><b>Centro de Cangas</b><span>unos 20 min a pie</span><small>1,4 km por la orilla de la playa y las calles de Cangas.</small></li>
+        <li><b>Puerto de Cangas</b><span>2 km · 4 min en coche</span><small>De la estación marítima salen los barcos a Vigo y, en temporada, a las Illas Cíes.</small></li>
+        <li><b>Vigo</b><span>26 km por carretera</span><small>Rodeando la ría por Moaña y Rande, unos 23 minutos en coche. Por mar, el barco desde Cangas.</small></li>
+      </ul>
+      <p class="llegar__nota">Aparcamiento privado y gratuito dentro de la finca.</p>
+    </div>
+    <div class="mapa" id="mapa">
+      <div class="mapa__consent" id="mapa-consent">
+        <p>El mapa de Google solo se carga si lo pides. Al cargarlo, Google puede instalar sus cookies.</p>
+        <button class="btn btn--linea" id="mapa-btn" type="button">Ver el mapa</button>
+        <a class="enlace" href="https://www.google.com/maps/search/?api=1&amp;query=42.25942%2C-8.76517" rel="noopener" target="_blank">O abrirlo en Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- solo «Sobria»: galería -->
+<section class="galeria" id="galeria" aria-labelledby="galeria-tit">
+  <div class="env">
+    <p class="eti" data-lamina>Galería</p>
+    <h2 class="tit" id="galeria-tit">Doce vistas de la casa.</h2>
+    <ul class="galeria__rej">
+      <li><img data-foto="casa-fachada" alt="La casa de color teja detrás de un seto" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="jardin" alt="El jardín con un pino y la ría detrás" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="anochecer" alt="Anochecer rojizo sobre la ría" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="marina-terraza" alt="Terraza del apartamento" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="amencer-cafetera" alt="Cafetera, nevera y balcón de una habitación" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="cala-aerea" alt="La cala de Rodeira vista desde arriba" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="marina-cocina" alt="Cocina y comedor del apartamento" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="sala" alt="La sala común, con sofás y televisión" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="puesta-dorada" alt="El sol dorado sobre el agua" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="atardecer-pinos" alt="Mesa de piedra bajo los pinos, con la ría detrás" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="casa-aerea" alt="La casa y la punta de Rodeira desde el aire" sizes="(max-width: 699px) 50vw, 25vw"></li>
+      <li><img data-foto="cangas-abuhardillada" alt="Habitación abuhardillada de la planta alta" sizes="(max-width: 699px) 50vw, 25vw"></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ pie: la garita se llena como la marea ============ -->
+<footer class="pie" id="pie">
+  <div class="env pie__env">
+    <div class="pie__marea" id="pie-marea">
+      <!--svg:marca/garita.svg id="pie-garita" class="pie__garita" role="img" aria-label="La garita, el logo de la casa" focusable="false"-->
+      <svg class="pie__agua" id="pie-agua" viewBox="0 0 388.99 335.84" aria-hidden="true" focusable="false">
+        <defs><clipPath id="pie-recorte"><path id="pie-recorte-p"/></clipPath></defs>
+        <g clip-path="url(#pie-recorte)"><g id="pie-ola-x"><path id="pie-ola" class="pie__ola" d=""/></g></g>
+      </svg>
+      <a class="pie__cierre btn btn--lima" id="pie-cierre" href="#consulta">Consultar fechas</a>
+    </div>
+    <div class="pie__datos">
+      <p class="pie__nombre">La garita <small>Casa rural</small></p>
+      <address>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=42.25942%2C-8.76517" rel="noopener" target="_blank">Camino de la Garita, 25 · Rodeira<br>36940 Cangas do Morrazo (Pontevedra)</a>
+      </address>
+      <p><a href="tel:+34617633166">617 633 166</a> · <a href="tel:+34986300257">986 300 257</a> · <a href="mailto:rural@casalagarita.com">rural@casalagarita.com</a></p>
+      <p class="pie__reg">Turismo rural · Registro de Turismo de Galicia TR-PO-000115</p>
+      <p><a href="https://www.instagram.com/casa_rural_la_garita/" rel="noopener" target="_blank">Instagram</a> · <a href="https://es-es.facebook.com/CasaLaGarita/" rel="noopener" target="_blank">Facebook</a></p>
+    </div>
+    <nav class="pie__legal" aria-label="Información legal">
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="accesibilidad.html">Accesibilidad</a>
+      <button type="button" id="abrir-cookies">Preferencias de cookies</button>
+    </nav>
+    <p class="pie__copy">© <span id="anno">2026</span> LA GARITA ESPJ · Casa Rural La Garita. Mapa © colaboradores de OpenStreetMap (ODbL).</p>
+  </div>
+</footer>
+
+<!-- barra fija en el móvil -->
+<div class="barra" id="barra" aria-hidden="true">
+  <a class="btn btn--lima" href="#consulta" tabindex="-1">Consultar fechas</a>
+  <a class="btn btn--linea-claro" href="tel:+34617633166" tabindex="-1">Llamar</a>
+</div>
+
+<div class="cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Esta web no usa cookies de análisis ni de publicidad. Solo guarda en tu navegador que ya has visto este aviso. El mapa de Google solo se carga si pulsas «Ver el mapa». <a class="enlace" href="cookies.html">Más información</a></p>
+  <div class="cookies__acc">
+    <button class="btn" id="ck-si" type="button">Entendido</button>
+    <button class="btn btn--linea" id="ck-no" type="button">Cerrar</button>
+  </div>
+</div>
+
+<!-- MANDO DE MAQUETA (solo con ?revision; no viaja al cliente) -->
+<div class="mando" id="mando" role="group" aria-label="Versión" hidden>
+  <span class="mando__eti">Versión</span>
+  <button type="button" data-densidad="garita" aria-pressed="true">La garita</button>
+  <button type="button" data-densidad="sobria" aria-pressed="false">Sobria</button>
+</div>
+<!-- fin del MANDO DE MAQUETA -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="js/ria.js?v=5fa54b9d" defer></script>
+<script src="js/main.js?v=a8ccd84d" defer></script>
+<script src="js/mapa.js?v=f7998fd1" defer></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* páginas legales: texto largo, sin cortina ni movimiento */
+.legal-cab { background: var(--noche); color: var(--espuma); --foco: var(--lima); }
+.legal-cab .env { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; }
+.legal-cab a { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+.legal-cab svg { width: 52px; height: auto; color: var(--garita-claro); }
+.legal-cab .volver { font-weight: 600; font-size: .92rem; text-decoration: underline; text-underline-offset: .2em; }
+.legal-cab .cab__nombre { color: var(--espuma); }
+.legal { padding: clamp(48px, 7vw, 90px) 0 clamp(60px, 8vw, 110px); }
+.legal .env { max-width: 760px; }
+.legal h1 { font-family: var(--letra-tit); font-weight: 400; font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1; margin-bottom: 28px; }
+.legal h2 { font-family: var(--letra-tit); font-weight: 400; font-size: 1.8rem; margin: 38px 0 12px; }
+.legal p, .legal li { margin-bottom: 12px; color: var(--tinta); }
+.legal ul { list-style: disc; padding-left: 1.3em; }
+.legal dl { margin-bottom: 18px; display: grid; grid-template-columns: max-content 1fr; gap: 8px 18px; }
+.legal dt { font-weight: 700; }
+.legal .aviso { background: var(--arena); border-left: 3px solid var(--almagre); padding: 14px 18px; border-radius: 0 14px 14px 0; }
+.legal-pie { background: var(--noche); color: var(--espuma-3); font-size: .82rem; padding: 26px 0; --foco: var(--lima); }
+.legal-pie .env { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.legal-pie a { color: var(--espuma-2); }
+.legal .nw { white-space: nowrap; }

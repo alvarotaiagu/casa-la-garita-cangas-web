@@ -1,0 +1,43 @@
+{
+  "fondo": {
+    "tipo": "transparente",
+    "descripcion": "El PNG original es RGBA con fondo transparente (alfa 0; los píxeles transparentes llevan RGB blanco 255,255,255). El JPG rectangular del cliente tiene fondo blanco. Pensado para fondo claro.",
+    "referencia_blanco": "#FFFFFF"
+  },
+  "metodo": "mediana del RGB de los píxeles con alfa 255 de cada tinta (las tintas son planas: todos los píxeles opacos de cada una son idénticos)",
+  "garita": {
+    "hex": "#547D64",
+    "rgb": [
+      84,
+      125,
+      100
+    ],
+    "luminancia_relativa": 0.1747,
+    "contraste_sobre_blanco": 4.67
+  },
+  "la_garita": {
+    "hex": "#11462B",
+    "rgb": [
+      17,
+      70,
+      43
+    ],
+    "luminancia_relativa": 0.0467,
+    "contraste_sobre_blanco": 10.85,
+    "nota": "la mota bajo la base de la garita tiene este mismo color"
+  },
+  "casa_rural": {
+    "hex": "#96C22B",
+    "rgb": [
+      150,
+      194,
+      43
+    ],
+    "luminancia_relativa": 0.4524,
+    "contraste_sobre_blanco": 2.09
+  },
+  "mota": {
+    "hex": "#11462B"
+  },
+  "pixeles_mezcla_entre_tintas": 0
+}

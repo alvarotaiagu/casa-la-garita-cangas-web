@@ -1,0 +1,211 @@
+[
+ {
+  "nombre": "hero-atardecer",
+  "archivo": "2022_04_Puesta-de-Sol-en-La-Garita.jpg",
+  "sat": 0.96
+ },
+ {
+  "nombre": "panoramica",
+  "archivo": "2022_04_PANO_20211012_195209_PEQ.jpg",
+  "sat": 1.0
+ },
+ {
+  "nombre": "punta-aerea",
+  "archivo": "2022_04_la_garita.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "cala-aerea",
+  "archivo": "2023_05_CABECERA-CONTACTO.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "casa-aerea",
+  "archivo": "2022_04_Casa-Rural-La-Garita.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "casa-jardin",
+  "archivo": "2023_04_La-Garita_La-Casa_001.jpg",
+  "sat": 0.98
+ },
+ {
+  "nombre": "casa-fachada",
+  "archivo": "2023_04_La-Garita_La-Casa.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "playa-rodeira",
+  "archivo": "2023_04_Casa-Rural-La-Garita-en-la-playa-de-Rodeira.jpg",
+  "sat": 0.85
+ },
+ {
+  "nombre": "rodeira-vista",
+  "archivo": "2023_04_rodeira.jpg",
+  "sat": 0.85
+ },
+ {
+  "nombre": "jardin",
+  "archivo": "2023_04_jardin.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "kayak-minigolf",
+  "archivo": "2023_04_kayak.jpg",
+  "sat": 0.88
+ },
+ {
+  "nombre": "jardin-pinos",
+  "archivo": "2023_05_Jardin-y-Playa-en-Casa-La-Garita.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "garita-piedra",
+  "archivo": "2023_05_tarifas.jpg",
+  "sat": 0.92
+ },
+ {
+  "nombre": "garita-bn",
+  "archivo": "2023_05_GARITA.jpg",
+  "sat": 1.0
+ },
+ {
+  "nombre": "galeria-catalejo",
+  "archivo": "2023_04_LACASA2-16.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "sala",
+  "archivo": "2023_04_Sala.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "escalera",
+  "archivo": "2023_04_LACASA2-16477.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "anochecer",
+  "archivo": "2023_04_anochecer.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "puesta-dorada",
+  "archivo": "2023_04_puesta-sol.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "atardecer-arbol",
+  "archivo": "2022_04_puesta_sol_la_garita.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "atardecer-pinos",
+  "archivo": "2023_04_puesta_sol_la_garita-003.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "rodeira-cama",
+  "archivo": "2022_04_habitacion_cabecera_portada.jpg"
+ },
+ {
+  "nombre": "rodeira-cama-2",
+  "archivo": "2023_04_Habitacion_Rodeira_003.jpg"
+ },
+ {
+  "nombre": "rodeira-vista-ria",
+  "archivo": "2023_04_Habitacion_Rodeira_004.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "rodeira-vista-muelle",
+  "archivo": "2023_04_Habitacion_Rodeira_005.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "solano-hab",
+  "archivo": "2023_04_SOLANO_001.jpg"
+ },
+ {
+  "nombre": "solano-terraza",
+  "archivo": "2023_04_SOLANO_002.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "solano-cama",
+  "archivo": "2023_04_SOLANO_009.jpg"
+ },
+ {
+  "nombre": "amencer-hab",
+  "archivo": "2023_04_Solpor_001.jpg"
+ },
+ {
+  "nombre": "amencer-balcon",
+  "archivo": "2023_04_Solpor_002.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "amencer-cafetera",
+  "archivo": "2023_04_Nevera-cafetera-y-balcon-en-Casa-La-Garita.jpg"
+ },
+ {
+  "nombre": "cangas-hab",
+  "archivo": "2023_04_Cangas_001.jpg"
+ },
+ {
+  "nombre": "cangas-vista",
+  "archivo": "2023_04_Cangas_002.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "cangas-abuhardillada",
+  "archivo": "2022_04_Habitacion-en-Casa-La-Garita_004.jpg"
+ },
+ {
+  "nombre": "morrazo-hab",
+  "archivo": "2023_04_Morrazo_001.jpg",
+  "sat": 0.85
+ },
+ {
+  "nombre": "morrazo-vista",
+  "archivo": "2023_04_Morrazo_002.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "marina-terraza",
+  "archivo": "2022_04_Apartamento-en-Casa-La-Garita_000.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "marina-terraza-v",
+  "archivo": "2022_04_Apartamento-en-Casa-La-Garita_001.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "marina-cocina",
+  "archivo": "2022_04_Apartamento-en-Casa-La-Garita_003.jpg"
+ },
+ {
+  "nombre": "marina-salon",
+  "archivo": "2023_04_Apartamento-en-Casa-La-Garita_006.jpg"
+ },
+ {
+  "nombre": "marina-dormitorio",
+  "archivo": "2023_04_Apartamento-en-Casa-La-Garita_007.jpg"
+ },
+ {
+  "nombre": "marina-vista",
+  "archivo": "2023_04_Apartamento_La-Garita_001.jpg",
+  "sat": 0.9
+ },
+ {
+  "nombre": "desayuno",
+  "ruta": "instagram/B1YGc0MpA2e.jpg",
+  "sat": 0.95
+ },
+ {
+  "nombre": "dron",
+  "archivo": "2020_09_24260486.jpg",
+  "sat": 0.92
+ }
+]
